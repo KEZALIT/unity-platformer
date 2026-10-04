@@ -6,7 +6,7 @@ using UnityEngine;
 public static class Sfx
 {
     static AudioSource source;
-    static AudioClip jump, coin, stomp, hurt, win, checkpoint;
+    static AudioClip jump, coin, stomp, hurt, milestone;
 
     public static void Init(AudioSource audioSource)
     {
@@ -15,16 +15,14 @@ public static class Sfx
         if (coin == null) coin = Tone("Coin", 990f, 1480f, 0.12f, false);
         if (stomp == null) stomp = Tone("Stomp", 300f, 90f, 0.15f, true);
         if (hurt == null) hurt = Tone("Hurt", 220f, 70f, 0.35f, true);
-        if (win == null) win = Tone("Win", 520f, 1040f, 0.6f, false);
-        if (checkpoint == null) checkpoint = Tone("Checkpoint", 660f, 880f, 0.25f, false);
+        if (milestone == null) milestone = Tone("Milestone", 520f, 1040f, 0.45f, false);
     }
 
     public static void Jump() { Play(jump, 0.35f); }
     public static void Coin() { Play(coin, 0.4f); }
     public static void Stomp() { Play(stomp, 0.4f); }
     public static void Hurt() { Play(hurt, 0.45f); }
-    public static void Win() { Play(win, 0.5f); }
-    public static void Checkpoint() { Play(checkpoint, 0.4f); }
+    public static void Milestone() { Play(milestone, 0.5f); }
 
     static void Play(AudioClip clip, float volume)
     {

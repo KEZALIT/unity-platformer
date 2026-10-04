@@ -15,10 +15,7 @@ public class Coin : MonoBehaviour
     {
         if (visual == null) return;
         float t = Time.time * 3f + phase;
-        visual.localPosition = new Vector3(0f, Mathf.Sin(t) * 0.12f, 0f);
-        Vector3 scale = visual.localScale;
-        scale.x = 0.6f * Mathf.Abs(Mathf.Cos(t * 0.8f)) + 0.08f;   // имитация вращения
-        visual.localScale = scale;
+        visual.localPosition = new Vector3(0f, Mathf.Sin(t) * 0.12f, 0f);   // вращение — это смена кадров в SpriteAnimator
     }
 
     void OnTriggerEnter2D(Collider2D other)

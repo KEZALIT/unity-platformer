@@ -1,11 +1,12 @@
 using UnityEngine;
 
-/// <summary>Чекпоинт: после него герой возрождается здесь.</summary>
+/// <summary>
+/// Невидимая зона в начале каждого участка земли: как только герой до неё добрался,
+/// после потери жизни он возрождается здесь.
+/// </summary>
 public class Checkpoint : MonoBehaviour
 {
-    public SpriteRenderer flag;
     public Vector2 respawnPoint;
-    public Color activeColor = new Color(0.3f, 0.85f, 0.4f);
     bool activated;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -14,7 +15,6 @@ public class Checkpoint : MonoBehaviour
         GameManager gm = GameManager.Instance;
         if (gm == null || gm.State != GameState.Playing) return;
         activated = true;
-        if (flag != null) flag.color = activeColor;
         gm.OnCheckpoint(respawnPoint);
     }
 }

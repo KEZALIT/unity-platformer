@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public float invulnerableTime = 1.5f;
     public float killY = -8f;
     public Transform visual;
+    public SpriteAnimator walkAnimation;
 
     Rigidbody2D rb;
     BoxCollider2D box;
@@ -94,6 +95,9 @@ public class PlayerController : MonoBehaviour
             scale.x = visualWidth * Mathf.Sign(inputX);
             visual.localScale = scale;
         }
+
+        // Кадры ходьбы сменяются только когда герой бежит по земле.
+        if (walkAnimation != null) walkAnimation.playing = inputX != 0f && Grounded;
 
         // Мигание после получения урона.
         if (invulnerableTimer > 0f)
