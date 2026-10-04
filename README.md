@@ -23,7 +23,7 @@
 1. Установите [Unity Hub](https://unity.com/download) и редактор Unity **2022.3 LTS** или новее (подойдёт и Unity 6).
 2. Склонируйте репозиторий:
    ```
-   git clone https://github.com/<владелец>/unity-platformer.git
+   git clone https://github.com/KEZALIT/unity-platformer.git
    ```
 3. В Unity Hub нажмите **Add → Add project from disk** и выберите папку репозитория. Если Hub скажет, что нужной версии редактора нет, выберите любую установленную версию не старше 2022.3.
 4. При первом открытии проект сам создаст пустую сцену `Assets/Scenes/Main.unity` и добавит её в Build Settings. Если этого не произошло — меню **Platformer → Создать сцену Main**.
