@@ -1,10 +1,10 @@
 # Unity Platformer
 
-Небольшой 2D-платформер на Unity (C#) с бесконечным случайным уровнем. Уровень и звуки создаются скриптами при запуске, ничего расставлять в редакторе не нужно. Графика — бесплатный набор [Pixel Platformer](https://kenney.nl/assets/pixel-platformer) от Kenney (лицензия CC0).
+Небольшой 2D-платформер на Unity (C#) с бесконечным случайным уровнем. Уровень и звуки создаются скриптами при запуске. Графика — бесплатный набор [Pixel Platformer](https://kenney.nl/assets/pixel-platformer) от Kenney (лицензия CC0).
 
 ## Скачать и играть
 
-Unity для этого не нужна. Скачайте [UnityPlatformer-Windows.zip](UnityPlatformer-Windows.zip), распакуйте архив целиком и запустите `UnityPlatformer.exe` (Windows, 64 бита). Игра открывается в окне; на весь экран и обратно — `Alt+Enter`.
+Скачайте [UnityPlatformer-Windows.zip](UnityPlatformer-Windows.zip), распакуйте архив целиком и запустите `UnityPlatformer.exe` (Windows, 64 бита). Игра открывается в окне; на весь экран и обратно — `Alt+Enter`.
 
 ## Что есть в игре
 
@@ -25,22 +25,6 @@ Unity для этого не нужна. Скачайте [UnityPlatformer-Windo
 | `Пробел`, `W` или `↑` | прыжок |
 | `R` | начать уровень заново |
 
-## Как запустить
-
-1. Установите [Unity Hub](https://unity.com/download) и редактор Unity **2022.3 LTS** или новее (подойдёт и Unity 6).
-2. Склонируйте репозиторий:
-   ```
-   git clone https://github.com/KEZALIT/unity-platformer.git
-   ```
-3. В Unity Hub нажмите **Add → Add project from disk** и выберите папку репозитория. Если Hub скажет, что нужной версии редактора нет, выберите любую установленную версию не старше 2022.3.
-4. При первом открытии проект сам создаст пустую сцену `Assets/Scenes/Main.unity` и добавит её в Build Settings. Если этого не произошло — меню **Platformer → Создать сцену Main**.
-5. Нажмите **Play**.
-
-Собрать игру в программу, которая запускается без Unity: меню **Platformer → Собрать игру для Windows**. Появятся папка `Build/UnityPlatformer` с `UnityPlatformer.exe` и архив `UnityPlatformer-Windows.zip` в корне проекта.
-
-### Если герой не двигается
-
-Игра читает клавиатуру через классический `Input`. Если в проекте включена только новая Input System, откройте **Edit → Project Settings → Player → Other Settings → Active Input Handling** и выберите **Both** или **Input Manager (Old)**.
 
 ## Структура
 
@@ -83,10 +67,7 @@ ProjectSettings/ProjectVersion.txt
 
 ## Графика
 
-Картинки взяты из набора [Pixel Platformer](https://kenney.nl/assets/pixel-platformer) (автор — Kenney, [kenney.nl](https://kenney.nl)), лицензия Creative Commons Zero (CC0): их можно свободно использовать, указывать автора не обязательно. Текст лицензии лежит в `Assets/Resources/Kenney/LICENSE.txt`.
+Картинки взяты из набора [Pixel Platformer](https://kenney.nl/assets/pixel-platformer) (автор — Kenney, [kenney.nl](https://kenney.nl)), лицензия Creative Commons Zero (CC0): Текст лицензии лежит в `Assets/Resources/Kenney/LICENSE.txt`.
 
-Из набора отобрано 28 картинок: герой, враг, монета, шипы, земля, доски платформ, флаг, сердце, облака, растения и фон. Размеры коллайдеров от картинок не зависят, поэтому графику можно менять, не трогая правила проходимости. Чтобы заменить картинку, положите свой PNG с тем же именем в `Assets/Resources/Kenney`; если после этого спрайт выглядит размытым — меню **Platformer → Настроить импорт спрайтов**.
+Из набора отобрано 28 картинок: герой, враг, монета, шипы, земля, доски платформ, флаг, сердце, облака, растения и фон.
 
-## Примечание
-
-После первого открытия Unity создаст рядом со скриптами файлы `.meta` и остальные файлы в `ProjectSettings/`. Их стоит добавить в репозиторий (`git add -A && git commit`), чтобы настройки проекта сохранялись у всех одинаково.
