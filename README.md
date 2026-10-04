@@ -2,6 +2,10 @@
 
 Небольшой 2D-платформер на Unity (C#) с бесконечным случайным уровнем. Уровень и звуки создаются скриптами при запуске, ничего расставлять в редакторе не нужно. Графика — бесплатный набор [Pixel Platformer](https://kenney.nl/assets/pixel-platformer) от Kenney (лицензия CC0).
 
+## Скачать и играть
+
+Unity для этого не нужна. Скачайте [UnityPlatformer-Windows.zip](UnityPlatformer-Windows.zip), распакуйте архив целиком и запустите `UnityPlatformer.exe` (Windows, 64 бита). Игра открывается в окне; на весь экран и обратно — `Alt+Enter`.
+
 ## Что есть в игре
 
 - **бесконечный уровень**: участки достраиваются случайно по мере движения, каждый запуск — новый уровень;
@@ -32,7 +36,7 @@
 4. При первом открытии проект сам создаст пустую сцену `Assets/Scenes/Main.unity` и добавит её в Build Settings. Если этого не произошло — меню **Platformer → Создать сцену Main**.
 5. Нажмите **Play**.
 
-Собрать игру в исполняемый файл: **File → Build Settings → Build**.
+Собрать игру в программу, которая запускается без Unity: меню **Platformer → Собрать игру для Windows**. Появятся папка `Build/UnityPlatformer` с `UnityPlatformer.exe` и архив `UnityPlatformer-Windows.zip` в корне проекта.
 
 ### Если герой не двигается
 
@@ -59,6 +63,7 @@ Assets/
   Editor/
     PlatformerSceneSetup.cs — автоматическое создание сцены
     KenneyImportSettings.cs — настройки импорта пиксельных картинок
+    BuildGame.cs            — сборка игры для Windows и упаковка в zip
 Packages/manifest.json
 ProjectSettings/ProjectVersion.txt
 ```
